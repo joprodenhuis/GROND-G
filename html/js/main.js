@@ -48,3 +48,34 @@ $(".js-toggleMenu").click(function(){
 function myFunction(x) { //make function named myFunction
 	x.classList.toggle("change"); // when onclick myfunction to execute the class change toggle
 }
+
+
+/* =============================================================================
+#HEADER FADE IN  
+============================================================================= */
+//init controller
+var controller = new ScrollMagic.Controller();
+
+//loop through all elements with the class fade-in
+$('.fade-in').each(function(){
+
+	//build a tween
+	var tween = TweenMax.from($(this), 0.3, {
+		opacity: 0,
+		y: '+=40',
+		ease:Linear.easeIn
+	});
+
+	//build a scene
+	var scene = new ScrollMagic.Scene({
+		offset: -280,
+		triggerElement: this
+	})
+	.setTween(tween) //trigger a tweenMax tween
+	.addTo(controller);
+
+	var reverse = scene.reverse();
+
+	scene.reverse(false);
+});
+
