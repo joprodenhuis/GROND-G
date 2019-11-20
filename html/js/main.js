@@ -5,6 +5,12 @@ TweenMax.from(".box-left, .box-right", 0.7, {
 	scale: 0.95,
 	opacity: 0
 });
+TweenMax.from(".intro-icon", 1, {
+	x:-60,
+	opacity: 0,
+	delay: 1.5,
+	ease:Power4.easeOut
+});
 
 TweenMax.from("h1", 0.8, {
 	y: 50,
@@ -16,13 +22,13 @@ TweenMax.from(".intro-content", 1, {
 	scaleY: 0,
 	transformOrigin: "50% top",
 	opacity: 0,
-	delay: 0.8
+	delay: 0.6
 })
 
-TweenMax.from(".stelling", 3, {
+TweenMax.from(".stelling", 2, {
 	x: -60,
 	opacity: 0,
-	delay: 1,
+	delay: 1.5,
 	ease:Power4.easeOut
 });
 
