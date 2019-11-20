@@ -1,0 +1,982 @@
+/* =============================================================================
+  #RESET
+============================================================================= */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0;margin:0 0 1em}
+
+
+/* =============================================================================
+  #TOOLS
+============================================================================= */
+html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+*, *:before, *:after { -webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit; }
+
+
+/* =============================================================================
+  #GENERAL
+============================================================================= */
+* {
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+html {
+  min-height: 100%;
+  height: 100%;
+
+  font-size: 16px;
+  font-size: 62.5%;
+
+  /*scroll-behavior: smooth;*/
+}
+
+body {
+  font-family: Roboto, Arial, Verdana, sans-serif;
+  color: #532cba;
+  font-size: 18px; font-size: 1.8rem;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: #ffffff;
+  padding-top: 100px;
+}
+
+/* Container */
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  max-width: 800px;
+}
+
+
+section:focus {
+  outline: none;
+}
+
+
+/* =============================================================================
+  #UTILITIES
+============================================================================= */
+.hide {
+  display: none;
+}
+
+/* Text aligns */
+.ta-left { text-align: left; }
+.ta-center { text-align: center; }
+.ta-right { text-align: right; }
+
+
+/* Put this on the wrapping div you want to clear */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after { clear: both; }
+
+/* Responsive video - put the iFrame in a div containg this class */
+.videoWrapper {
+  position: relative;
+  margin-bottom: 16px;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+
+  .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+
+/* =============================================================================
+  #TYPOGRAPHY
+============================================================================= */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+
+  line-height: 1.1;
+}
+
+
+/* Heading 1 */
+h1 {
+  margin-bottom: 10px;
+
+  font-size: 36px; font-size: 3.6rem;
+  text-transform: uppercase;
+}
+
+
+/* Heading 2 */
+h2 {
+  margin-bottom: 60px;
+
+  font-size: 36px; font-size: 3.6rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Heading 3 */
+h3 {
+  font-size: 28px; font-size: 2.8rem;
+  text-transform: uppercase;
+}
+
+
+p {
+  margin-bottom: 2rem;
+}
+
+.lead {
+  font-size: 120%;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em, i {
+  font-style: italic;
+}
+
+.ol,
+.ul {
+  margin-bottom: 18px;
+  padding-left: 30px;
+}
+
+.ul {
+  list-style: disc;
+}
+
+.ol {
+  list-style: decimal;
+}
+
+
+/* =============================================================================
+  #ELEMENTS
+============================================================================= */
+img {
+  max-width: 100%;
+  font-style: italic;
+  vertical-align: middle;
+}
+
+img[width],
+img[height] {
+  max-width: none;
+}
+
+hr {
+  margin: 30px 0;
+
+  height: 1px;
+
+  background-color: #e6e6e6;
+  border: none;
+}
+
+
+/* =============================================================================
+  #BUTTONS
+============================================================================= */
+.btn {
+  display: inline-block;
+  padding: 15px 25px;
+  min-width: 280px;
+  margin-bottom: 20px;
+
+  color: #ffffff;
+  font-size: 24px; font-size: 2.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  background: linear-gradient(45deg, #ffa538 50%, #ffaf1a 50%); 
+  /*-webkit-background-clip:text;*/
+  /*-webkit-text-fill-color:transparent;*/
+  position: relative;
+  border: none;
+  border-radius: 0px;
+
+  /*transition: background-color 150ms ease-in-out;*/
+}
+
+.btn--small {
+  font-size: 18px; font-size: 1.8rem;
+  min-width: 0px;
+  width: 100%;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background:linear-gradient(45deg, #ffa538 50%, #ffaf1a 50%);
+  z-index: -1;
+}
+
+.btn, .btn::after {
+  background-size: 300%;
+  background-position: 100%;
+  transition: background-position 0.5s ease-in-out;
+}
+
+.btn:hover, .btn:hover::after {
+  background-position: 0;
+}
+
+/* Button modifiers */
+.btn--block {
+  display: block;
+  width: 100%;
+}
+
+
+/* =============================================================================
+  #MESSAGES
+============================================================================= */
+/* Messages */
+.message {
+  display: block;
+  margin: 15px 0;
+  padding: 8px 10px;
+
+  color: #ffffff;
+  font-size: 16px; font-size: 1.6rem;
+  font-weight: 700;
+
+  border-radius: 4px;
+}
+
+  /* No margin on last item in message */
+  .message *:last-child {
+    margin-bottom: 0;
+  }
+
+  .message--error   { background-color: #e23c3c; }
+  .message--warning { background-color: #df920d; }
+  .message--success { background-color: #71b62c; }
+  .message--info    { background-color: #3484cf; }
+
+
+/* =============================================================================
+  #FORM STYLING
+============================================================================= */
+
+/* FORM LABEL BLOCK */
+.form__section {
+  margin-bottom: 30px;
+}
+
+.form__section:last-child {
+  margin-bottom: 0;
+}
+
+  .form__section .btn {
+    margin-bottom: 0;
+  }
+
+/* Labels */
+.form__label {
+  display: block;
+  margin-bottom: 16px;
+  margin-right: 0;
+
+  font-weight: 700;
+}
+
+label + label {
+  margin-left: 30px;
+}
+
+.form__label + label {
+  margin-left: 0;
+}
+
+
+/* Default */
+select,
+input {
+  font-size: 18px; font-size: 1.8rem;
+}
+
+select,
+textarea,
+input:focus {
+   outline: none;
+}
+
+
+/* Radio and checkbox input */
+input[type="radio"],
+input[type="checkbox"] {
+   margin-right: 8px;
+}
+
+
+/* General text inputs */
+textarea,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  padding: 10px 14px;
+  width: 100%;
+
+  font-family: Roboto, Arial, Verdana, sans-serif;
+  font-size: 20px; font-size: 2.0rem;
+  line-height: 1.4;
+
+  background-color: #ffffff;
+  box-shadow: none;
+  border: 1px solid #532cba;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+   box-shadow: inset 0 0 0 1px #532cba;
+}
+
+
+/* Textarea */
+textarea {
+  min-height: 140px;
+  max-width: 360px;
+  width: 100%;
+}
+
+
+/* Select input */
+select {
+  height: 42px;
+  width: 100%;
+
+  border: none;
+  background-color: #f3f3f3;
+
+  cursor: pointer;
+}
+
+
+/* Error input */
+textarea.error,
+input[type="text"].error,
+input[type="tel"].error,
+input[type="email"].error,
+input[type="password"].error,
+input[type="number"].error {
+  border: 1px solid #e23c3c;
+}
+
+.field-error.hide {
+  display: none;
+}
+
+.form--login label.error,
+.field-error {
+  display: block;
+  margin-top: 10px;
+  margin-left: 0 !important;
+
+  font-size: 16px; font-size: 1.6rem;
+  color: #e23c3c;
+}
+
+
+/* ##FLEXBOX FORM =========================================================== */
+.form--flex  .form__section{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+  .form--flex .form__section input {
+    flex: 0 0 calc(100% - 150px);
+  }
+
+  .form--flex .form__label {
+    flex: 0 0 150px;
+    margin: 4px 0 4px 0;
+    align-self: center;
+  }
+
+  .form--flex .form__section .message {
+    margin-left: 150px;
+    flex: 0 0 calc(100% - 150px);
+  }
+
+  .form--flex .form__section--no-label .message {
+    margin-left: 0;
+    flex: 0 0 calc(100%);
+  }
+
+
+/* =============================================================================
+#MAIN SECTION
+============================================================================= */
+.main {
+  padding: 60px 0;
+}
+
+/* =============================================================================
+#HEADER SECTION
+============================================================================= */
+header {
+  padding: 20px 60px;
+  position: fixed;
+  z-index: 200;
+  height: 100px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.1);
+  border-bottom: 4px solid #532cba;
+}
+
+.logo {
+  height: 60px;
+  float: left;
+}
+
+span.toggle-menu {
+  display: none;
+}
+
+nav {
+  float: right;
+}
+
+nav li {
+  font-size: 20px; font-size: 2.0rem;
+  float: left;
+}
+
+nav li + li {
+  margin-left: 30px;
+}
+
+nav li a {
+  display: block;
+  padding: 16px 0;
+
+  text-decoration: none;
+}
+
+
+/* =============================================================================
+#INTRO SECTION
+============================================================================= */
+.intro {
+  display: flex;
+}
+
+div.intro-item p, h1 {
+  color: white;
+}
+
+.box-left {
+  width: 50%;
+  background-color: #01baf8;
+  padding: 20px 60px;
+  z-index: 80;
+}
+
+.box-right {
+  width: 50%;
+  background-color: #a4deff;
+  padding: 20px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+div.box-left img {
+  margin-left: -70px;
+}
+
+
+/* =============================================================================
+#REGISTER SECTION
+============================================================================= */
+.registreren {
+  background-image: url('img/first-illustration.png');
+  background-repeat: repeat-x;
+  background-position: center bottom;
+
+  padding-bottom: 200px;
+  border-bottom: 4px solid #532cba;
+}
+
+
+/* =============================================================================
+#PROGRAMME SECTION
+============================================================================= */
+.programma {
+  /*padding: 20px 60px;*/
+  background-color: #a4deff;
+}
+
+.timeline {
+  position: relative;
+  z-index: 100;
+}
+
+  .timeline > li {
+    position: relative;
+    padding: 10px 0 10px 0;
+  }
+
+  .timeline > li {
+    padding-left: calc(50% + 30px);
+  }
+
+    .timeline > li span {
+      display: block;
+    }
+
+.time {
+  position: absolute;
+  right: 50%;
+  padding-right: 30px;
+  text-align: right;
+}
+
+.timeline > li::before,
+.timeline > li::after {
+  content: "";
+  position: absolute;
+}
+
+.timeline > li::before {
+  top: 0;
+  bottom: 0;
+  left: 50%; 
+  width: 4px;
+  transform: translateX(-50%);
+  
+  background-color: #5229b9;
+}
+
+.timeline > li:first-child::before {
+  top: 8px;
+}
+
+.timeline > li:last-child::before {
+  bottom: calc(100% - 8px);
+}
+
+.timeline > li::after {
+  top: 8px;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translateX(-50%);
+  
+  background-color: #a4deff;
+  
+  border-radius: 50%;
+  border: 4px solid #5229b9;
+}
+
+
+/* =============================================================================
+#LOCATIONS SECTION
+============================================================================= */
+.locaties {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.location_cards {
+  display: flex;
+  justify-content: center;
+  margin: 0 -10px;
+
+  pointer-events: none;
+}
+
+.card {
+  overflow: hidden;
+  margin: 0px 10px;
+  width: 20%;
+  width: calc(25% - 20px);
+  background-color: #ffffff;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.15);
+
+  pointer-events: auto;
+
+  transition: transform 350ms ease-in-out, box-shadow 350ms ease-in-out;
+}
+
+  .card .btn {
+    margin-bottom: 0;
+  }
+
+.card-thumb {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 67%;
+}
+
+  .card-thumb .thumb-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transition: transform 1050ms ease-in-out;
+  }
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+div.card h3 {
+  color: #000000;
+}
+
+div.card p {
+  color: #939393;
+}
+
+div.remodal h3 {
+  margin-bottom: 20px;
+}
+
+div.remodal img {
+  height: 25px;
+  margin-right: 5px;
+}
+
+
+/* =============================================================================
+#FOOTER SECTION
+============================================================================= */
+.footer {
+  background-color: #5c5750;
+  color: #ffffff;
+  border-bottom: 4px solid #ffffff;
+  padding-bottom: 120px;
+  
+  display: flex;
+  justify-content: center;
+  
+  background-image: url('img/second-illustration.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.footer-logo {
+  padding-right: 60px;
+  width: 220px;
+}
+
+.footer-content {
+  width: 40%;
+}
+
+.footer h3 {
+  margin-bottom: 20px;
+}
+
+/* =============================================================================
+#DESKTOP SCREEN 
+============================================================================= */
+@media screen and (min-width: 950px) {
+  nav li a:hover {
+    padding-top: 10px;
+  }
+
+  nav li a:active {
+    font-weight: bold;
+  }
+
+  .card:hover .card-thumb .thumb-image {
+    transform: scale(1.1);
+    transform-origin: center center;
+  }
+
+.location_cards:hover .card {
+    transform: scale(.97);
+  }
+
+  .location_cards .card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 13px 15px rgba(0,0,0,0.05);
+    cursor: pointer;
+  }
+}
+
+/* =============================================================================
+#LOCATION IN BETWEEN 
+============================================================================= */
+@media screen and (max-width: 1170px) {
+  .intro-icon {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+ .location_cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0px -10px; 
+  }
+
+  .card {
+    width: calc(50% - 20px);
+    margin: 0px auto;
+    margin-bottom: 30px;
+  }
+}
+
+/* =============================================================================
+#TABLET SCREEN 
+============================================================================= */
+@media screen and (max-width: 950px) {
+  span.toggle-menu {
+    display: inline-block;
+    float: right;
+    margin-top: 11px;
+    margin-right: 12px;
+    cursor: pointer;
+  }
+
+  /* Makw the hamburger menu icon */
+  div.bar1, div.bar2, div.bar3 {
+    width: 40px;
+    height: 5px;
+    background-color: #532cba;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  /* Transform the hemburger menu icon to an exit icon */
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px); /* Make the transformation work on multiple browsers */
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .change .bar2 {
+    opacity: 0; /* Make the middle bar transparent */
+  }
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px); /* Make the transformation work on multiple browsers */
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+  /* Style and position of the menu */
+  .nav {
+    position: fixed;
+    padding-top: 20px;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(100%); /* Let the menu fill the whole screen */
+
+    transition: transform 350ms ease-in-out; /* Let the menu transition into the new position */
+
+    background-color: #a4deff;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav li + li {
+    margin-left: 0px;
+  }
+
+  nav li a {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .menu-is-open nav.nav {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .intro {
+    display: block;
+  }
+
+  .box-left {
+    width: 100%;
+  }
+
+  .box-right {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .registreren {
+    background-size: 150vh;
+    padding-bottom: 150px !important;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .footer-content {
+    width: 60%;
+  }
+}
+
+
+/* =============================================================================
+#TIMELINE BETWEEN 
+============================================================================= */
+@media screen and (max-width: 740px) {
+  .timeline {
+    padding-left: 50px;
+  }
+}
+
+/* =============================================================================
+#MOBILE SCREEN 
+============================================================================= */
+@media screen and (max-width: 740px) {
+  header.header {
+    padding: 20px 15px;
+  }
+
+  .logo {
+    height: 40px;
+    margin-top: 5px; 
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .box-left {
+    padding: 20px 15px;
+  }
+
+  .main {
+    padding: 35px 15px;
+  }
+
+  .intro-icon {
+    padding-left: 50px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .timeline {
+    padding: 0px 70px;
+  }
+
+  .timeline > li::before, .timeline > li::after {
+    left: 0;
+    transform: translateX(0%);
+  }
+
+  .timeline > li::before {
+    left: 10px;
+  }
+
+  .timeline > li {
+    padding-left: 30px;
+  }
+
+  .time {
+    position: static;
+    right: 0%;
+    padding-right: 0px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 740px) {
+ .location_cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0px;
+  }
+
+  .card {
+    width: 100%;
+    margin: 0px auto;
+    margin-bottom: 30px;
+  }
+
+  .card-thumb {
+    padding-bottom: 40%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    background-image: url('img/footer-illustration-small.png');
+    padding-bottom: 100px;
+  }
+
+  .footer-logo {
+    padding-right: 0px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .footer h3 {
+    text-align: center;
+  }
+
+  .footer-content {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .timeline {
+    padding: 0px 15px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
