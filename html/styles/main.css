@@ -872,8 +872,17 @@ div.remodal img {
 #MOBILE SCREEN 
 ============================================================================= */
 @media screen and (max-width: 740px) {
+  body {
+    padding-top: 80px;
+  }
+
   header.header {
-    padding: 20px 15px;
+    padding: 10px 15px;
+    height: 80px;
+  }
+
+  .nav {
+    top: 80px;
   }
 
   .logo {
