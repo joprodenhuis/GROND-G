@@ -856,6 +856,11 @@ div.remodal img {
   .footer-content {
     width: 60%;
   }
+
+  .footer {
+    background-image: url('img/footer-illustration-small.png');
+    padding-bottom: 100px;
+  }
 }
 
 
@@ -902,6 +907,16 @@ div.remodal img {
 
   .intro-icon {
     padding-left: 50px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  label.form__label {
+    margin: 8px 0px;
+  }
+
+  .form__section {
+    margin-bottom: 20px;
   }
 }
 
@@ -954,8 +969,7 @@ div.remodal img {
   .footer {
     flex-direction: column;
     align-items: center;
-    background-image: url('img/footer-illustration-small.png');
-    padding-bottom: 100px;
+    padding-bottom: 120px;
   }
 
   .footer-logo {
@@ -977,6 +991,11 @@ div.remodal img {
   .timeline {
     padding: 0px 15px;
   }
+
+  .footer {
+    background-image: url('img/footer-illustration-last.png');
+  }
+}
 
 
 
