@@ -43,11 +43,8 @@ TweenMax.from(".btn", 1, {
 $(".js-toggleMenu").click(function(){
 	console.log("Hallo");
 	$("body").toggleClass("menu-is-open"); //add menu-is-open item on body to toggle the styling
+	$(".toggle-menu").toggleClass("change");
 });
-
-function myFunction(x) { //make function named myFunction
-	x.classList.toggle("change"); // when onclick myfunction to execute the class change toggle
-}
 
 
 /* =============================================================================
@@ -60,7 +57,7 @@ var controller = new ScrollMagic.Controller();
 $('.fade-in').each(function(){
 
 	//build a tween
-	var tween = TweenMax.from($(this), 0.3, {
+	var tween = TweenMax.from($(this), 0.5, {
 		opacity: 0,
 		y: '+=40',
 		ease:Linear.easeIn

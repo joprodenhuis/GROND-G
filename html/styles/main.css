@@ -886,6 +886,11 @@ div.remodal img {
     height: 80px;
   }
 
+  h2 {
+    font-size: 30px; font-size: 3.0rem;
+    margin-bottom: 40px;
+  }
+
   .nav {
     top: 80px;
   }
