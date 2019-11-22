@@ -37,7 +37,7 @@ html {
 body {
   font-family: Roboto, Arial, Verdana, sans-serif;
   color: #532cba;
-  font-size: 18px; font-size: 1.8rem;
+  font-size: 20px; font-size: 2.0rem;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -113,8 +113,9 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   margin-bottom: 10px;
 
-  font-size: 36px; font-size: 3.6rem;
+  font-size: 44px; font-size: 4.4rem;
   text-transform: uppercase;
+  color: #03b9f8;
 }
 
 
@@ -198,7 +199,7 @@ hr {
   min-width: 280px;
   margin-bottom: 20px;
 
-  color: #ffffff;
+  color: #532cba;
   font-size: 24px; font-size: 2.4rem;
   font-weight: bold;
   text-decoration: none;
@@ -206,11 +207,11 @@ hr {
   text-transform: uppercase;
   cursor: pointer;
 
-  background: linear-gradient(45deg, #ffa538 50%, #ffaf1a 50%); 
+  background: linear-gradient(45deg, #fff 50%, #fff 50%); 
   /*-webkit-background-clip:text;*/
   /*-webkit-text-fill-color:transparent;*/
   position: relative;
-  border: none;
+  border: 5px solid #532cba;
   border-radius: 0px;
 
   /*transition: background-color 150ms ease-in-out;*/
@@ -222,14 +223,20 @@ hr {
   width: 100%;
 }
 
-.btn::after {
+.btn:hover {
+  color: #03b9f8;
+  border: 5px solid #03b9f8;
+}
+
+/*.btn::after {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background:linear-gradient(45deg, #ffa538 50%, #ffaf1a 50%);
+  background:linear-gradient(45deg, #3898EC 50%, #fff 50%);
+  opacity: 50%;
   z-index: -1;
 }
 
@@ -241,7 +248,7 @@ hr {
 
 .btn:hover, .btn:hover::after {
   background-position: 0;
-}
+}*/
 
 /* Button modifiers */
 .btn--block {
@@ -452,8 +459,8 @@ header {
   left: 0;
   width: 100%;
   background-color: #ffffff;
-  box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.1);
-  border-bottom: 4px solid #532cba;
+  /*box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.1);
+  border-bottom: 4px solid #532cba;*/
 }
 
 .logo {
@@ -493,25 +500,29 @@ nav li a {
   display: flex;
 }
 
-div.intro-item p, h1 {
-  color: white;
+.intro p strong {
+  font-size: 30px; font-size: 3.0rem;
 }
 
 .box-left {
   width: 50%;
-  background-color: #01baf8;
+  background-color: #fff;
   padding: 20px 60px;
   z-index: 80;
 }
 
 .box-right {
   width: 50%;
-  background-color: #a4deff;
+  background-color: #fff;
   padding: 20px 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 50;
+}
+
+section.intro .box-right {
+  padding-right: 0px;
 }
 
 div.box-left img {
@@ -523,12 +534,32 @@ div.box-left img {
 #REGISTER SECTION
 ============================================================================= */
 .registreren {
-  background-image: url('img/first-illustration.png');
+/*  background-image: url('img/first-illustration.png');
   background-repeat: repeat-x;
   background-position: center bottom;
 
-  padding-bottom: 200px;
+  padding-bottom: 200px;*/
   border-bottom: 4px solid #532cba;
+  display: flex;
+}
+
+.registreren .box-left {
+  background-image: url('img/register-image.png');
+  background-repeat: repeat-x;
+  background-position: center bottom;
+  background-size: 100%;
+
+  margin-bottom: -60px;
+}
+
+.registrerenH2 {
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 50px;
+}
+
+form {
+  width: 100%;
 }
 
 
@@ -537,7 +568,7 @@ div.box-left img {
 ============================================================================= */
 .programma {
   /*padding: 20px 60px;*/
-  background-color: #a4deff;
+  background-color: #fff;
 }
 
 .timeline {
@@ -596,7 +627,7 @@ div.box-left img {
   height: 24px;
   transform: translateX(-50%);
   
-  background-color: #a4deff;
+  background-color: #fff;
   
   border-radius: 50%;
   border: 4px solid #5229b9;
@@ -609,6 +640,7 @@ div.box-left img {
 .locaties {
   padding-left: 60px;
   padding-right: 60px;
+  margin-bottom: 20px;
 }
 
 .location_cards {
@@ -667,6 +699,7 @@ div.card h3 {
 
 div.card p {
   color: #939393;
+  margin-bottom: 25px;
 }
 
 div.remodal h3 {
@@ -683,7 +716,7 @@ div.remodal img {
 #FOOTER SECTION
 ============================================================================= */
 .footer {
-  background-color: #5c5750;
+  background-color: #03b9f8;
   color: #ffffff;
   border-bottom: 4px solid #ffffff;
   padding-bottom: 120px;
@@ -846,9 +879,13 @@ div.remodal img {
 }
 
 @media screen and (max-width: 950px) {
-  .registreren {
-    background-size: 150vh;
-    padding-bottom: 150px !important;
+  section.registreren {
+    display: flex;
+    flex-direction: column-reverse !important;
+  }
+
+  .registreren .box-left {
+    height: 800px;
   }
 }
 
