@@ -48,7 +48,7 @@ $(".js-toggleMenu").click(function(){
 
 
 /* =============================================================================
-#HEADER FADE IN  
+FADE IN  
 ============================================================================= */
 //init controller
 var controller = new ScrollMagic.Controller();
@@ -75,4 +75,5 @@ $('.fade-in').each(function(){
 
 	scene.reverse(false);
 });
+
 

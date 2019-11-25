@@ -564,6 +564,22 @@ form {
 
 
 /* =============================================================================
+#REGISTER SECTION GERBEN
+============================================================================= */
+.register__form {
+  padding: 30px 15px;
+
+  background-color: #ffffff;
+}
+
+.register__slogan {
+  background-color: #00baf8;
+}
+
+
+
+
+/* =============================================================================
 #PROGRAMME SECTION
 ============================================================================= */
 .programma {
@@ -759,6 +775,22 @@ div.remodal img {
     transform-origin: center center;
   }
 
+
+  .register {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .register__form,
+  .register__slogan {
+    width: 50%;
+  }
+
+  .register__form {
+    padding: 30px 60px;
+  }
+
+
 .location_cards:hover .card {
     transform: scale(.97);
   }
@@ -885,7 +917,11 @@ div.remodal img {
   }
 
   .registreren .box-left {
-    height: 800px;
+    height: 100vh;
+  }
+
+  .register__form {
+    padding: 30px 60px;
   }
 }
 
@@ -959,6 +995,10 @@ div.remodal img {
 
   .form__section {
     margin-bottom: 20px;
+  }
+
+  .register__form {
+    padding: 30px 15px;
   }
 }
 
